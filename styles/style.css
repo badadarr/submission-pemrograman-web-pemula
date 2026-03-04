@@ -152,6 +152,46 @@ main {
   margin-bottom: 4px;
 }
 
+/* ===== FILTER BAR ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0 8px;
+}
+
+.filter-btn {
+  background: white;
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+.filter-btn.active {
+  background-color: #c0392b;
+  border-color: #c0392b;
+  color: white;
+  font-weight: 600;
+}
+
+.filter-result {
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+  min-height: 1.2em;
+  margin-top: -8px;
+}
+
 /* ===== ARTICLE ===== */
 article {
   background: white;
@@ -182,29 +222,20 @@ article img {
   display: block;
 }
 
-.article-meta {
+/* ===== ARTICLE INFO (Data-Driven) ===== */
+.article-info {
   display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
   flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: #666;
+  border-left: 3px solid #c0392b;
+  padding-left: 10px;
 }
 
-.article-origin {
-  background-color: #ffeaa7;
-  color: #636e72;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.article-badge {
-  background-color: #c0392b;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.82rem;
-  font-weight: 600;
+.article-info p {
+  margin: 0;
 }
 
 article p {
@@ -277,21 +308,52 @@ aside p {
   margin: 12px 0 8px;
 }
 
-.aside-list {
-  list-style: none;
-  padding: 0;
+/* ===== ASIDE SECTION — REKOMENDASI ===== */
+.aside-section {
   text-align: left;
+  margin-top: 4px;
 }
 
-.aside-list li {
-  padding: 6px 0;
-  color: #555;
-  border-bottom: 1px solid #fdf0e8;
+.aside-section h3 {
+  margin-top: 20px;
+  color: #c0392b;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #c0392b;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.aside-intro {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 10px 0;
+  color: #777;
+  line-height: 1.4;
+}
+
+.recommendation-item {
+  margin-bottom: 14px;
+  padding-left: 10px;
+  border-left: 3px solid #eee;
+  transition: border-color 0.2s ease;
+}
+
+.recommendation-item:hover {
+  border-left-color: #c0392b;
+}
+
+.recommendation-item h4 {
   font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
 }
 
-.aside-list li:last-child {
-  border-bottom: none;
+.recommendation-item p {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
 /* ===== FOOTER ===== */
